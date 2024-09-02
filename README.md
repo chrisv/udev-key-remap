@@ -8,12 +8,12 @@ Tested/used with F40 (Fedora Workstation 40) running (directly) on Lenovo hardwa
 
 I switched to udev because per login/session `setxkbmap` no longer worked after upgrading to F40.
 
-(But why remap `capslock` to `esc`? I use vi(m) motions a lot (in [vi](https://www.redhat.com/sysadmin/introduction-vi-editor), [vim](https://www.vim.org), [neovim](https://neovim.io/), [doom emacs](https://github.com/doomemacs/doomemacs), [vimium-c](https://github.com/gdh1995/vimium-c) and a few others that support it). The `esc` key is used a lot. The `capslock` key is a key I (almost) never use, so I remap it to `esc` to reduce both travel and the risk of RSI.)
+(But why remap `capslock` to `esc`? I use [vim motions](https://vimhelp.org/motion.txt.html) a lot, which implies using the `esc` key a lot. The `capslock` key is a key I almost never use, so I remap it to `esc` to reduce both pinky-travel and the risk of RSI.)
 
 ## Warning: this is system-wide
 
 
-With `setxkbmap` remaps are ad hoc, i.e. per login or creation of session (i.e. via `/etc/profile` or `$HOME/.profile` ), so any other users (e.g. root, others) were not affected.
+With `setxkbmap` remaps are ad hoc, i.e. per login or creation of session (i.e. via `/etc/profile` or `$HOME/.profile`), so any other users (e.g. root, others) were not affected.
 
 ```sh 
 # custom keyboard settings which worked via pre-F40 $HOME/.profile 
