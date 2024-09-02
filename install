@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo cp ./58* /etc/udev/hwdb.d/
+sudo systemd-hwdb update
+sudo udevadm trigger
