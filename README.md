@@ -40,7 +40,7 @@ Note: the `58-AT_Translated_Set_2_keyboard.hwdb` file can be used for most, if n
 
 ## Adding another keyboard
 
-Example below is for creating one for the `Lenovo ThinkPad Compact USB Keyboard with TrackPoint` keyboard (`event6` connects to the keyboard, `event7` to the trackpoint).
+Example below is for creating one for the `Lenovo ThinkPad Compact USB Keyboard with TrackPoint` (`event6` connects to the keyboard, `event7` to the trackpoint).
 
 Notice there is another keyboard `AT Translated Set 2 keyboard` seemingly attached as well, but this refers to the built-in laptop keyboard. Same procedure applies if you want to remap keys on that keyboard, but you can use the `58-AT_Translated_Set_2_keyboard.hwdb` file for that (it's generic for most, if not all built-in laptop keyboards).
 
@@ -337,7 +337,7 @@ evdev:input:b0003v0853p0145*
 
 ## Windows?
 
-Yeah... no. But if you install an systemd-distro in WSL2 it *might* work. Have not tried (yet).
+Yeah... no. But if you install a systemd-distro in WSL2 it *might* work. Have not tried (yet).
 
 ## Author
 
