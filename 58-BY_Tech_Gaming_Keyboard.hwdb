@@ -1,0 +1,12 @@
+### remaps capslock to esc via udev for the keyboard below
+### -- cf. https://github.com/chrisv/udev-key-remap
+###
+### Input device name: "BY Tech Gaming Keyboard"
+### Input device ID: bus 0x3 vendor 0x258a product 0x10c version 0x111
+###
+### Manufacturer: XINMENG (China)
+### Model: XM-M71 V2
+### AKA: Attack Shark M71, Xinmeng M71 V2, Womier S-K71, Yunzil AL71
+###
+evdev:input:b0003v258Ap010C*
+  KEYBOARD_KEY_70039=esc
