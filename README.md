@@ -8,7 +8,7 @@ Tested/used with F40 (Fedora Workstation 40) running (directly) on Lenovo hardwa
 
 I switched to udev because per login/session `setxkbmap` no longer worked after upgrading to F40.
 
-(But why remap `capslock` to `esc`? I use [vim motions](https://vimhelp.org/motion.txt.html) a lot, which implies using the `esc` key a lot. The `capslock` key is a key I almost never use, so I remap it to `esc` to reduce both pinky-travel and the risk of RSI.)
+...But why remap `capslock` to `esc`? I use [vim motions](https://vimhelp.org/motion.txt.html) a lot, which implies using the `esc` key a lot. The `capslock` key is a key I almost never use, so I remap it to `esc` to not have to hyperextend my pinky and risk RSI. (A similarly practical substitution for emacs users to keep their left hand from transforming into a vampyric claw is mapping the `leftctrl` key to the `capslock` key, which is probably also why HHKB put it there on their keyboards.)
 
 ## Warning: this is system-wide
 
