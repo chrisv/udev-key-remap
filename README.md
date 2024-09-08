@@ -12,10 +12,9 @@ I switched to udev because per login/session `setxkbmap` no longer worked after 
 
 ## Warning: this is system-wide
 
-
 With `setxkbmap` remaps are ad hoc, i.e. per login or creation of session (i.e. via `/etc/profile` or `$HOME/.profile`), so any other users (e.g. root, others) were not affected.
 
-```sh 
+```sh
 # custom keyboard settings which worked via pre-F40 $HOME/.profile 
 # -- make CAPSLOCK behave like ESC
 # setxkbmap -option caps:escape
@@ -23,7 +22,7 @@ With `setxkbmap` remaps are ad hoc, i.e. per login or creation of session (i.e. 
 # setxkbmap -option
 ```
 
-In contrast, a udev key remap is system-wide, so all users are affected, including root. This is is because [libevdev does not have knowledge of X clients or Wayland clients, it is too low in the stack](https://www.freedesktop.org/software/libevdev/doc/latest/). 
+In contrast, a udev key remap is system-wide, so all users are affected, including root. This is is because [libevdev does not have knowledge of X clients or Wayland clients, it is too low in the stack](https://www.freedesktop.org/software/libevdev/doc/latest/).
 This is a feature, not a bug, but do be aware of this and only install on personal/single-use workstations/laptops and ssh from there into all other envs that are either shared or should not be affected by your personal key remaps.
 
 ## Install
@@ -37,13 +36,15 @@ sudo udevadm trigger
 
 Note: the `58-AT_Translated_Set_2_keyboard.hwdb` file can be used for most, if not all, built-in laptop keyboards because they typically use the same device identifier (`b0011v0001p0001*`). Any external keyboard (wired, bluetooth, whatever) will most likely need to be added (see below) because udev key remaps are device specific.
 
+## Filenames
+
+The `.hwdb` files are named after the device name as shown in `evtest` (see below for more info).
 
 ## Adding another keyboard
 
 Example below is for creating one for the `Lenovo ThinkPad Compact USB Keyboard with TrackPoint` (`event6` connects to the keyboard, `event7` to the trackpoint).
 
 Notice there is another keyboard `AT Translated Set 2 keyboard` seemingly attached as well, but this refers to the built-in laptop keyboard. Same procedure applies if you want to remap keys on that keyboard, but you can use the `58-AT_Translated_Set_2_keyboard.hwdb` file for that (it's generic for most, if not all built-in laptop keyboards).
-
 
 1. run `evtest`
 2. select the device event number for the *keyboard* event (the keyboard may have multiple device *events*, e.g. trackpoint, mouse, or custom programmable buttons, etc.)
@@ -319,6 +320,7 @@ The `bus`, `vendor` and `product` need to be 0-prepadded to 4 long and any chara
 # becomes:
 evdev:input:b0003v17EFp6047*
 ```
+
 ## Example .hwdb file
 
 ```
@@ -345,8 +347,8 @@ Yeah... no. But if you install a systemd-distro in WSL2 it *might* work. Have no
 
 ## Refs / thanks
 
-- https://www.kernel.org/doc/html/latest/input/event-codes.html#input-event-codes
-- https://fedoraproject.org/wiki/Features/EvdevInputDriver
+- <https://www.kernel.org/doc/html/latest/input/event-codes.html#input-event-codes>
+- <https://fedoraproject.org/wiki/Features/EvdevInputDriver>
 
 ## License
 
