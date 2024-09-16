@@ -341,6 +341,14 @@ evdev:input:b0003v0853p0145*
 
 Yeah... no. But if you install a systemd-distro in WSL2 it *might* work. Have not tried (yet).
 
+## VSCode
+
+VSCode (the electron editor) defaults to internal "keyboard dispatch" (on linux at least). If somehow the capslock doesn't work inside an *Editor* tab/window but it does in its built-in *Terminal*, add following line to user setings (Ctrl-P - User Settings JSON; usually located under `~/.config/Code/User/settings.json`) and restart the app:
+
+```json
+"keyboard.dispatch": "keyCode",
+```
+    
 ## Author
 
 [Chris Vertonghen](https://github.com/chrisv)
