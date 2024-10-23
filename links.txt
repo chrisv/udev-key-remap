@@ -1,0 +1,17 @@
+search:
+- https://duckduckgo.com/?q=linux+add+esc+keymap
+
+udev:
+- https://unix.stackexchange.com/questions/128234/modifier-keys-cannot-be-mapped-to-regular-keys-on-usb-keyboard-with-udev
+- https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux
+- https://unix.stackexchange.com/questions/130656/how-to-get-all-my-keys-to-send-keycodes#130762
+
+Ubuntu-specific:
+- https://askubuntu.com/questions/243751/how-are-key-codes-mapped-to-the-appropriate-action
+
+Windows-specific:
+- https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager
+
+Vim-specific:
+- https://vi.stackexchange.com/questions/16963/remap-esc-key-in-vim
+
