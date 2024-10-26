@@ -36,6 +36,10 @@ sudo udevadm trigger
 
 Note: the `58-AT_Translated_Set_2_keyboard.hwdb` file can be used for most, if not all, built-in laptop keyboards because they typically use the same device identifier (`b0011v0001p0001*`). Any external keyboard (wired, bluetooth, whatever) will most likely need to be added (see below) because udev key remaps are device specific.
 
+## Reset / Undo
+
+To reset or undo the key remaps, simply remove the copied `.hwdb` files from `/etc/udev/hwdb.d/` and run the commands above.
+
 ## Filenames
 
 The `.hwdb` files are named after the device name as shown in `evtest` (see below for more info).
@@ -337,6 +341,10 @@ evdev:input:b0003v0853p0145*
   KEYBOARD_KEY_70039=esc
 ```
 
+## Modifier keys?
+
+If you need more fine-grained control, or need adjustment of modifier keys, or even different behaviour per application, you can use [xremap](https://github.com/xremap/xremap). It's a bit more involved, but it's also more powerful.
+
 ## Windows?
 
 Yeah... no. But if you install a systemd-distro in WSL2 it *might* work. Have not tried (yet).
@@ -357,7 +365,7 @@ VSCode (the electron editor) defaults to internal "keyboard dispatch" (on linux 
 
 - <https://www.kernel.org/doc/html/latest/input/event-codes.html#input-event-codes>
 - <https://fedoraproject.org/wiki/Features/EvdevInputDriver>
-- https://github.com/xremap/xremap (more fine-grained control, incl. combinations/modifier-keys, which applications, etc.)
+- <https://github.com/xremap/xremap> (more fine-grained control, incl. combinations/modifier-keys, which applications, etc.)
 
 ## License
 
