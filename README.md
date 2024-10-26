@@ -1,6 +1,6 @@
 # udev-key-remap
 
-This is a set of remap-files to remap the `capslock` key to `esc` via udev. (58 is the decimal code for the capslock key if you're wondering.)
+This is a set of remap-files to remap the `capslock` key to `esc` (or `leftctrl`) via udev. (58 is the decimal code for the capslock key if you're wondering.)
 
 Tested/used with F40 (Fedora Workstation 40) running (directly) on Lenovo hardware (P52/P720).
 
@@ -357,6 +357,7 @@ VSCode (the electron editor) defaults to internal "keyboard dispatch" (on linux 
 
 - <https://www.kernel.org/doc/html/latest/input/event-codes.html#input-event-codes>
 - <https://fedoraproject.org/wiki/Features/EvdevInputDriver>
+- https://github.com/xremap/xremap (more fine-grained control, incl. combinations/modifier-keys, which applications, etc.)
 
 ## License
 
