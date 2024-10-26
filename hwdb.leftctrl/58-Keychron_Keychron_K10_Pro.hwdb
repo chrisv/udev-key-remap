@@ -1,0 +1,11 @@
+### remaps capslock to leftctrl via udev for the keyboard below
+### -- cf. https://github.com/chrisv/udev-key-remap
+###
+### Input device name: "Keychron Keychron K10 Pro"
+### Input device ID: bus 0x3 vendor 0x3434 product 0x2a3 version 0x111
+###
+### Manufacturer: Keychron (Hong Kong SAR)
+### Model: Keychron K10 Pro (FULL-108)
+###
+evdev:input:b0003v3434p02A3*
+  KEYBOARD_KEY_70039=leftctrl

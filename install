@@ -1,4 +1,6 @@
 #!/bin/bash
-sudo cp ./hwdb/*.hwdb /etc/udev/hwdb.d/
+# default to ./hwdb if no path is given
+path=${1:-hwdb.esc}
+sudo cp "./${path}/*.hwdb" /etc/udev/hwdb.d/
 sudo systemd-hwdb update
 sudo udevadm trigger
