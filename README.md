@@ -343,7 +343,7 @@ evdev:input:b0003v0853p0145*
 
 ## Modifier keys?
 
-If you need more fine-grained control, or need adjustment of modifier keys, or even different behaviour per application, you can use [xremap](https://github.com/xremap/xremap). It's a bit more involved, but it's also more powerful.
+If you need more fine-grained control, or need adjustment of modifier keys, or even different behaviour per application, you can use [xremap](https://github.com/xremap/xremap) or [kanata](https://github.com/jtroo/kanata), for which a sample implementation (for linux) can be found in the `kanata/` directory of this repo. It's a bit more involved, but it's also more powerful.
 
 ## Windows?
 
@@ -356,7 +356,7 @@ VSCode (the electron editor) defaults to internal "keyboard dispatch" (on linux 
 ```json
 "keyboard.dispatch": "keyCode",
 ```
-    
+
 ## Author
 
 [Chris Vertonghen](https://github.com/chrisv)
@@ -366,6 +366,7 @@ VSCode (the electron editor) defaults to internal "keyboard dispatch" (on linux 
 - <https://www.kernel.org/doc/html/latest/input/event-codes.html#input-event-codes>
 - <https://fedoraproject.org/wiki/Features/EvdevInputDriver>
 - <https://github.com/xremap/xremap> (more fine-grained control, incl. combinations/modifier-keys, which applications, etc.)
+- <https://github.com/jtroo/kanata> (similar to xremap, and multi-platform linux/macosx/windows)
 
 ## License
 
