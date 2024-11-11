@@ -6,7 +6,7 @@
 ###
 ### Manufacturer: XINMENG (China)
 ### Model: XM-M71 V2
-### AKA: Attack Shark M71, Xinmeng M71 V2, Womier S-K71, Yunzil AL71
+### AKA: Attack Shark M71, Xinmeng M71 V2, Womier S-K71, Yunzil AL71, YUNZII AL71
 ###
 evdev:input:b0003v258Ap010C*
   KEYBOARD_KEY_70039=leftctrl
