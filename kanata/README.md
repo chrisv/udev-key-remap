@@ -25,6 +25,10 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 # reboot at this time may help resolve this issue
 ```
 
+## caveats
+- *captures* keyboard input so `evtest` may indicate as such, and may not capture/process key-event with `kanata.service` is enabled
+- above setup is user-based, so when shelling into a remote system (ssh) your home-row-mods will not work; install `kanata.service` system-wide if needed.
+
 ## refs/links
 - https://github.com/jtroo/kanata/blob/main/docs/setup-linux.md
 - https://github.com/dreamsofcode-io/home-row-mods/tree/main/kanata/linux
