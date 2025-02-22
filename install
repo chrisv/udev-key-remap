@@ -1,6 +1,7 @@
 #!/bin/bash
-# default to ./hwdb if no path is given
+# default to ./hwdb.esc if no path is given
 path=${1:-hwdb.esc}
+# TODO: add verifications/validations before continuing steps below
 sudo cp ./$path/*.hwdb /etc/udev/hwdb.d/
 sudo systemd-hwdb update
 sudo udevadm trigger
