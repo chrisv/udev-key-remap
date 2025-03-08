@@ -1,4 +1,4 @@
-### remaps capslock to esc via udev for the keyboard below
+### remaps capslock to leftctrl via udev for the keyboard below
 ### -- cf. https://github.com/chrisv/udev-key-remap
 ###
 ### Input device name: "RDR Crush 80"
